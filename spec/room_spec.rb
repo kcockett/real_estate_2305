@@ -31,7 +31,7 @@ RSpec.describe Room do
       room1 = Room.new(:bedroom, 10, '13')
       room1.paint
 
-      expect(room1.painted?).to eq(true)
+      expect(room1.painted?).to eq(true) 
     end
   end
 end
