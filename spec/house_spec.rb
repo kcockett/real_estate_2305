@@ -32,8 +32,23 @@ RSpec.describe House do
             house = House.new("$400000", "123 sugar lane")
             room_1 = Room.new(:bedroom, 10, '13')
             house.add_room(room_1)
-            
+            room_2 = Room.new(:bedroom, 10, '13')
+            house.add_room(room_2)
+            #require 'pry'; binding.pry  #confirmed house.rooms is array of room objects
+
             expect(house.rooms).not_to be_empty
         end
+    end
+
+    describe "Iteration 3" do
+        it "above_market_average? returns true if >$500k" do
+            house = House.new("$400000", "123 sugar lane")
+
+            expect(above_market_average?).to eq(false)
+
+            house_2 = House.new("$500001", "125 sugar lane")
+            expect(above_market_average?).to eq(true)
+        end
+
     end
 end
