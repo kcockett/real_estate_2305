@@ -42,12 +42,12 @@ RSpec.describe House do
 
     describe "Iteration 3" do
         it "above_market_average? returns true if >$500k" do
-            house = House.new("$400000", "123 sugar lane")
+            house_1 = House.new("$400000", "123 sugar lane")
 
-            expect(above_market_average?).to eq(false)
+            expect(house_1.above_market_average?).to eq(false)
 
             house_2 = House.new("$500001", "125 sugar lane")
-            expect(above_market_average?).to eq(true)
+            expect(house_2.above_market_average?).to eq(true)
         end
 
     end
