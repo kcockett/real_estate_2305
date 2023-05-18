@@ -31,4 +31,12 @@ class House
         rooms_list
     end
 
+    def area
+        area = 0
+        rooms.each do |room|
+            area += (room.length * room.width.to_i)
+        end
+        area
+    end
+
 end

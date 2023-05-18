@@ -61,7 +61,7 @@ RSpec.describe House do
             house.add_room(room_3) 
             house.add_room(room_4) 
 
-            #require 'pry'; binding.pry
+            #require 'pry'; binding.pry #confirmed returned array is correct
             expect(house.rooms_from_category(:bedroom)).not_to be_empty
             expect(house.rooms_from_category(:attic)).to be_empty
         end
