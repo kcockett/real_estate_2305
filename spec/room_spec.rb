@@ -1,4 +1,4 @@
-require './lib/room'
+require "./lib/room"
 
 RSpec.describe Room do
   describe "Iteration 1" do
