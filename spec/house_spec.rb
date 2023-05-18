@@ -11,8 +11,15 @@ RSpec.describe House do
 
         it "house.price returns and integer of value" do
             house = House.new("$400000", "123 sugar lane")
-                
+
             expect(house.price).to eq(400000)
+            expect(house.address).to eq("123 sugar lane")
+        end
+
+        it "verify house.address returns address entered" do
+            house = House.new("$400000", "123 sugar lane")
+
+            expect(house.address).to eq("123 sugar lane")
         end
     end
 end
