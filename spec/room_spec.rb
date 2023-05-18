@@ -24,7 +24,7 @@ RSpec.describe Room do
     it "expect default of unpainted" do
       room1 = Room.new(:bedroom, 10, '13')
 
-      expect(room1.unpainted?).to eq(true)
+      expect(room1.painted?).to eq(true)
     end
   end
 end
