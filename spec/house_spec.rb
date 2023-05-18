@@ -31,11 +31,9 @@ RSpec.describe House do
         it "add_room method creates room object" do
             house = House.new("$400000", "123 sugar lane")
             room_1 = Room.new(:bedroom, 10, '13')
-            #room_2 = Room.new(:bedroom, 11, '15')
             house.add_room(room_1)
-            #house.add_room(room_2)
-
-            #expect(house.rooms).to eq(true)
+            
+            expect(house.rooms).not_to be_empty
         end
     end
 end
