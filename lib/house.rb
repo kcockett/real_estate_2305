@@ -20,5 +20,6 @@ class House
     def above_market_average?
         self.price > 500000
     end
+    
 
 end
