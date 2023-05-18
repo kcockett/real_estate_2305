@@ -20,6 +20,15 @@ class House
     def above_market_average?
         self.price > 500000
     end
-    
+
+    def rooms_from_category(category)
+        rooms_list = []
+        rooms.each do |room|
+            if room.category == category
+                rooms_list << room
+            end
+        end
+        rooms_list
+    end
 
 end
